@@ -1,4 +1,4 @@
-NetMonitor - Monitoreo de Red en Tiempo Real
+##NetMonitor - Monitoreo de Red en Tiempo Real
 Descripción:
 NetMonitor es una aplicación web ligera desarrollada en Next.js que permite a los usuarios visualizar en tiempo real la calidad de su conexión a Internet. La plataforma recopila información sobre el estado de la red, incluyendo velocidad de conexión, latencia, tipo de red y estado de la batería, proporcionando una experiencia simple y accesible para evaluar la estabilidad de la conexión.
 
