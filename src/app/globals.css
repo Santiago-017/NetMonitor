@@ -1,24 +1,19 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Asegurar que el fondo cambie en modo oscuro */
+html {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Modo oscuro */
+.dark {
+  background-color: #111827; /* Fondo oscuro */
+  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.dark .card {
+  background-color: #1f2937; /* Color más oscuro para tarjetas */
+  color: white;
 }
