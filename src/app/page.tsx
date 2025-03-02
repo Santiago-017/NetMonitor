@@ -1,4 +1,4 @@
-import NetworkStatus from "../components/NetworkStatus";
+import NetworkStatus from "../components/NetworkStatus/NetworkStatus";
 
 export default function Home() {
   return (
