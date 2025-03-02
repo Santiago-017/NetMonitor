@@ -8,7 +8,7 @@ export function useDataUsage() {
   useEffect(() => {
     const updateDataUsage = () => {
       const resources = performance.getEntriesByType("resource");
-      let totalBytes = resources.reduce((sum, resource) => sum + ((resource as PerformanceResourceTiming).transferSize || 0), 0);
+      const totalBytes = resources.reduce((sum, resource) => sum + ((resource as PerformanceResourceTiming).transferSize || 0), 0);
       setDataUsage(totalBytes / (1024 * 1024)); // Convertir a MB
     };
 
