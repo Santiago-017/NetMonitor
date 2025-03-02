@@ -3,6 +3,7 @@ import DataUsageMonitor from './DataUsageMonitor';
 import NetworkInfo from './NetworkInfo';
 import BatteryStatus from './BatteryStatus';
 import NetworkSpeedMonitor from './NetworkSpeedMonitor';
+import PingMonitor from './PingMonitor';
 
 const NetworkStatus: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const NetworkStatus: React.FC = () => {
       <DataUsageMonitor />
       <BatteryStatus />
       <NetworkSpeedMonitor/>
+      <PingMonitor/>
     </div>
   );
 };

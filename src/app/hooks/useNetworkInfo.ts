@@ -9,22 +9,30 @@ export function useNetworkInfo() {
     rtt: 0,
   });
 
+  interface NavigatorWithConnection extends Navigator {
+    connection?: {
+      effectiveType?: string;
+      downlink?: number;
+      rtt?: number;
+    };
+  }
+  
   useEffect(() => {
     function updateNetworkInfo() {
-      if ('connection' in navigator) {
-        const connection = (navigator as any).connection;
+      if ("connection" in navigator) {
+        const connection = (navigator as NavigatorWithConnection).connection;
+  
         setNetworkInfo({
-          type: connection.effectiveType || 'unknown',
-          downlink: connection.downlink || 0,
-          rtt: connection.rtt || 0,
+          type: connection?.effectiveType || "unknown",
+          downlink: connection?.downlink || 0,
+          rtt: connection?.rtt || 0,
         });
       }
     }
-
+  
     updateNetworkInfo();
-    const interval = setInterval(updateNetworkInfo, 5000);
-    return () => clearInterval(interval);
   }, []);
+  
 
   return networkInfo;
 }

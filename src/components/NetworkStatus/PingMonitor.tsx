@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Card } from "react-bootstrap";
 import { usePing } from "@/app/hooks/usePing";
