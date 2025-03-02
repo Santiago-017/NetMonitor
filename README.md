@@ -18,7 +18,7 @@ A pesar de contar con un ejecutable para la aplicación, **es necesario clonar e
    npm start
    ```
 4. **Ejecutar la aplicación**
-   - Abrir `NetMonitor.exe` en la carpeta `dist`.
+   - Abrir `NetMonitor Setup 0.1.0`.
    
 ---
 
