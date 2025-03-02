@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react';
-import { Card } from 'react-bootstrap';
-import { useDataUsage } from '../../hooks/useDataUsage';
+import React from "react";
+import { Card } from "react-bootstrap";
+import { useDataUsage } from "@/app/hooks/useDataUsage";
 
 const DataUsageMonitor: React.FC = () => {
   const dataUsage = useDataUsage();
@@ -11,7 +11,7 @@ const DataUsageMonitor: React.FC = () => {
     <Card className="m-4 p-3 shadow">
       <Card.Body>
         <Card.Title>📡 Monitor de Consumo de Datos</Card.Title>
-        <p>Datos descargados: {dataUsage.toFixed(2)} MB</p>
+        <p>Datos descargados: <b>{dataUsage.toFixed(2)}</b> MB</p>
       </Card.Body>
     </Card>
   );

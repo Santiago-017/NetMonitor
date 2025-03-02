@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Table, Card } from 'react-bootstrap';
-import { useNetworkInfo } from '../../hooks/useNetworkInfo';
+import { useNetworkInfo } from '@/app/hooks/useNetworkInfo';
 
 const NetworkInfo: React.FC = () => {
   const { type, downlink, rtt } = useNetworkInfo();

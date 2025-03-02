@@ -1,16 +1,18 @@
-import { useState, useEffect } from 'react';
+"use client";
+
+import { useState, useEffect } from "react";
 
 export function useDataUsage() {
   const [dataUsage, setDataUsage] = useState(0);
 
   useEffect(() => {
-    function calculateDataUsage() {
-      const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-      const totalSize = resources.reduce((acc, res) => acc + (res.transferSize || 0), 0);
-      setDataUsage(totalSize / (1024 * 1024)); // Convertir a MB
-    }
+    const updateDataUsage = () => {
+      const resources = performance.getEntriesByType("resource");
+      let totalBytes = resources.reduce((sum, resource) => sum + ((resource as PerformanceResourceTiming).transferSize || 0), 0);
+      setDataUsage(totalBytes / (1024 * 1024)); // Convertir a MB
+    };
 
-    const interval = setInterval(calculateDataUsage, 5000);
+    const interval = setInterval(updateDataUsage, 5000); // Actualizar cada 5s
     return () => clearInterval(interval);
   }, []);
 

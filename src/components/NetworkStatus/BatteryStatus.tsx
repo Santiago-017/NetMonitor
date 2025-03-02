@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { useBatteryStatus } from '../../hooks/useBatteryStatus';
+import { useBatteryStatus } from '@/app/hooks/useBatteryStatus';
 
 const BatteryStatus: React.FC = () => {
   const { level, charging } = useBatteryStatus();
