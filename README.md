@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NetMonitor
 
-## Getting Started
+## 📌 Guía de Instalación
+A pesar de contar con un ejecutable para la aplicación, **es necesario clonar el repositorio y ejecutar `npm start` antes de abrir la aplicación**. Esto se debe a que el ejecutable no inicia automáticamente el servidor de Next.js.
 
-First, run the development server:
+### **Pasos para la instalación y ejecución**
+1. **Clonar el repositorio**
+   ```sh
+   git clone https://github.com/Santiago-017/netmonitor.git
+   cd netmonitor
+   ```
+2. **Instalar las dependencias**
+   ```sh
+   npm install
+   ```
+3. **Iniciar el servidor**
+   ```sh
+   npm start
+   ```
+4. **Ejecutar la aplicación**
+   - Abrir `NetMonitor.exe` en la carpeta `dist`.
+   
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Descripción del Proyecto
+NetMonitor es una aplicación diseñada para monitorear la conectividad de red en tiempo real. La aplicación permite visualizar el estado de la conexión y analizar parámetros relevantes del rendimiento de la red.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Tecnologías utilizadas**
+- **Next.js**: Framework de React para el desarrollo del frontend.
+- **React.js**: Para la creación de componentes reutilizables.
+- **Electron.js**: Para empaquetar la aplicación en un ejecutable de escritorio.
+- **Bootstrap**: Para la interfaz de usuario.
+- **Recharts**: Para visualización de datos en gráficas.
+- **Express.js**: Para manejar las peticiones del backend.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Funcionalidades implementadas**
+✔ Monitoreo del estado de la red en tiempo real.  
+✔ Interfaz amigable con visualización en modo oscuro/claro.  
+✔ Visualización de gráficas con estadísticas de conexión.  
+✔ Aplicación empaquetada con Electron para su uso en Windows.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📌 Mejoras propuestas
+Durante el desarrollo del proyecto, se identificaron varias funciones mencionadas en el código pero que aún no han sido implementadas. A continuación, algunas mejoras propuestas:
 
-To learn more about Next.js, take a look at the following resources:
+🔹 **Iniciar automáticamente el servidor Next.js al ejecutar la aplicación**  
+Actualmente, el usuario debe ejecutar `npm start` manualmente antes de abrir el ejecutable. Se sugiere encontrar una solución para integrar esta funcionalidad dentro del ejecutable.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔹 **Implementación completa de medición de velocidad de red**  
+En el código existen referencias a un posible "medidor de velocidad", pero no está completamente implementado. Se recomienda desarrollar un módulo que mida la latencia y el ancho de banda de la conexión.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔹 **Optimización de la integración entre Electron y Next.js**  
+Se pueden mejorar las configuraciones de `main.js` para evitar problemas con la carga de la aplicación y el renderizado en blanco.  
 
-## Deploy on Vercel
+🔹 **Notificaciones y alertas en caso de desconexión**  
+Agregar una función que notifique al usuario cuando la conexión a internet se interrumpe.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🔹 **Soporte multiplataforma**  
+Por ahora, la aplicación está optimizada solo para Windows. Se podría expandir la compatibilidad para macOS y Linux.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📌 Contribución y contacto
+Si deseas contribuir a este proyecto, puedes hacer un `fork` del repositorio y enviar un `pull request` con tus mejoras. Para cualquier duda, puedes contactar a los desarrolladores a través del repositorio en GitHub.
+
